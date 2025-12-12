@@ -43,6 +43,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/user/login").permitAll()
                         //User pode acessar POST /auth/register (criar conta)
                         .requestMatchers(HttpMethod.POST, "/user/register").permitAll()
+                        //Parece errado deixa essa linha, mas deixei por ser teste, pra facilitar o fluxo de uso do app
                         .requestMatchers(HttpMethod.POST, "/account/register").permitAll()
                         //Exige autenticação em qualquer outra rota
                         .anyRequest().authenticated())
