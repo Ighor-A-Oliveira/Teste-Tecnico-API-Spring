@@ -35,7 +35,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 
 ## Como rodar
 - git clone https://github.com/Ighor-A-Oliveira/Teste-Tecnico-API-Spring.git
-- cd Estagio-Teste-API
+- cd Teste-Tecnico-API-Spring
 - Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
 - mvn clean install
 - mvn spring-boot:run
@@ -110,7 +110,7 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 
 ```bash
 git clone https://github.com/Ighor-A-Oliveira/Teste-Tecnico-API-Spring.git
-cd Estagio-Teste-API
+cd Teste-Tecnico-API-Spring
 Va em application.properties e veja se tem tem a configuração spring.datasource.url=jdbc:postgresql://db:5432/security_test
 
 # Sobe banco + API em containers
