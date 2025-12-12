@@ -2,10 +2,6 @@
 
 API REST de carteira digital desenvolvida como teste técnico para processo de estagio.
 
-[![Java 21](https://img.shields.io/badge/Java-21-blue.svg)](https://www.oracle.com/java/)
-[![Spring Boot 3](https://img.shields.io/badge/Spring_Boot-3.3+-green)](https://spring.io/projects/spring-boot)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-blue.svg)](https://www.postgresql.org/)
-[![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)](https://maven.apache.org/)
 
 ## Funcionalidades implementadas
 - Cadastro de usuários com CPF, nome, email e senha criptografada (BCrypt)
@@ -41,7 +37,9 @@ GRANT ALL PRIVILEGES ON DATABASE security_test TO spring_user;
 - mvn spring-boot:run
 > **Aplicação disponível em: http://localhost:8080*
 
-## Application.Properties
+## Application.properties
+
+```properties
 spring.application.name=teste-tecnico-api-spring
 # Local Host
 spring.datasource.url=jdbc:postgresql://localhost:5432/security_test
@@ -53,14 +51,14 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 
 
-
-
 # Hibernate settings
 spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.default_schema=public
+```
+
 
 
 
