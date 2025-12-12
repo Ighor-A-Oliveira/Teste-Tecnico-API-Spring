@@ -17,13 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/account")
 public class AccountController {
 
-    private final AccountRepository accountRepository;
     private final AccountService accountService;
 
 
     private  AccountController(AccountService accountService, AccountRepository accountRepository){
         this.accountService = accountService;
-        this.accountRepository = accountRepository;
 
     }
 

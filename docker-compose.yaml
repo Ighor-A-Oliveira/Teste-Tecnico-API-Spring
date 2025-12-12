@@ -1,35 +1,33 @@
 services:
   db:
     image: postgres:18
-    container_name: postgresql-db-1
     environment:
       POSTGRES_DB: security_test
       POSTGRES_USER: spring_user
       POSTGRES_PASSWORD: strongpassword
     ports:
-      - "5432:5432"      # Mapeia a porta 5432 para o host, permitindo conexão via localhost
+      - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data  # Volume persistente
+      - postgres_data:/var/lib/postgresql
     networks:
-      - jwt-demo-network
+      - teste-tecnico-api-spring
 
   app:
     image: maven:3.9-eclipse-temurin-21
-    container_name: spring_app
     depends_on:
       - db
     ports:
-      - "8080:8080"  # Porta do Spring Boot
+      - "8080:8080"
     volumes:
       - .:/app
     working_dir: /app
     command: ./mvnw spring-boot:run
     networks:
-      - jwt-demo-network
+      - teste-tecnico-api-spring
 
 volumes:
-  postgres_data:  # Volume para persistir dados do PostgreSQL
+  postgres_data:
 
 networks:
-  jwt-demo-network:
+  teste-tecnico-api-spring:
     driver: bridge

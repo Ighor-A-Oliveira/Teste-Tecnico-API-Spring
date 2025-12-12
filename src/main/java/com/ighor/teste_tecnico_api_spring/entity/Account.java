@@ -1,14 +1,17 @@
 package com.ighor.teste_tecnico_api_spring.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-@Data
+@Getter
+@Setter
 @Table(name = "accounts")
 @Entity(name = "accounts")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Account {
 
     @Id

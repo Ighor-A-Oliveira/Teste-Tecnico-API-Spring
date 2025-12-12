@@ -2,14 +2,17 @@ package com.ighor.teste_tecnico_api_spring.entity;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "transactions")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transaction {
 
     @Id

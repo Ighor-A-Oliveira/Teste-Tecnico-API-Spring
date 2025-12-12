@@ -1,7 +1,9 @@
 package com.ighor.teste_tecnico_api_spring.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 @Setter
 @Table(name = "users")
 @Entity(name = "users")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements UserDetails {
     //The user controller must have user details so it can have a proper role and well defined limits
 
